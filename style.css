@@ -1,0 +1,117 @@
+/* 1. Color palette */
+
+:root {
+    --background: #F3F5F0;
+    --text: #263633;
+    --blue: #344F63;
+    --teal: #285D58;
+    --sage: #91A99A;
+}
+
+/* 2. General page settings */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background);
+    color: var(--text);
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* 3. Vertical navigation */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 230px;
+    height: 100vh;
+    padding: 55px 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    border-right: 1px solid var(--sage);
+}
+
+.sidebar a {
+    color: var(--blue);
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.2s;
+}
+
+.sidebar a:hover {
+    color: var(--teal);
+}
+
+.sidebar .site-name {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 45px;
+}
+
+/* 4. Main content */
+
+.main-content {
+    margin-left: 230px;
+    padding: 90px 8%;
+    min-height: 100vh;
+}
+
+.introduction h1 {
+    font-size: clamp(32px, 4vw, 54px);
+    font-weight: 400;
+    letter-spacing: -1.5px;
+    margin: 0;
+    color: var(--blue);
+}
+
+.introduction p {
+    font-size: 18px;
+    color: var(--teal);
+    margin-top: 14px;
+}
+
+/* 5. Space for future visual work */
+
+.visual-space {
+    margin-top: 65px;
+    min-height: 350px;
+    border: 1px solid var(--sage);
+    background-color: rgba(145, 169, 154, 0.06);
+}
+
+/* 6. Responsive layout */
+
+@media (max-width: 750px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 25px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 18px;
+        border-right: none;
+        border-bottom: 1px solid var(--sage);
+    }
+
+    .sidebar .site-name {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 50px 25px;
+    }
+
+    .visual-space {
+        min-height: 250px;
+    }
+}
