@@ -79,11 +79,21 @@ body {
 
 /* 5. Space for future visual work */
 
+/* 5. Homepage image */
+
 .visual-space {
-    margin-top: 65px;
-    min-height: 350px;
-    border: 1px solid var(--sage);
-    background-color: rgba(145, 169, 154, 0.06);
+    margin-top: 45px;
+    width: 100%;
+    border: none;
+    background: transparent;
+}
+
+.visual-space img {
+    display: block;
+    width: 75%;
+    max-width: 850px;
+    height: auto;
+    margin: 0 auto;
 }
 
 /* 6. Responsive layout */
@@ -110,8 +120,14 @@ body {
         margin-left: 0;
         padding: 50px 25px;
     }
-
-    .visual-space {
-        min-height: 250px;
+    
+        .visual-space {
+        margin-top: 35px;
+        min-height: 0;
     }
+
+    .visual-space img {
+        width: 100%;
+    }
+}
 }
